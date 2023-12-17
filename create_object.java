@@ -32,6 +32,8 @@ class student {
         avg = total / 5;
         System.out.println("Avagrage:- " + avg);
 
+        scan.close();
+
         int n = (int) (avg / 10);
         switch (n) {
             case 9:
