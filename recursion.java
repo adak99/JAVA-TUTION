@@ -13,7 +13,7 @@ public class recursion {
 
         recursion p = new recursion();
 
-        int result = p.cal(5);
+        int result = p.cal(8);
         System.out.println(result);
     }
 }
