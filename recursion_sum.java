@@ -4,11 +4,11 @@ public class recursion_sum {
 
         int c = num1 + num2;
 
-        if (c != 0 || c == 0)
+        if (c != 0 || c == 0) {
             return c;
-
-        else
+        } else {
             return add(num1, num2);
+        }
     }
 
     public static void main(String[] args) {
