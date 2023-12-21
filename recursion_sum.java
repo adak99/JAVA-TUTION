@@ -1,4 +1,4 @@
-public class recursion_sum { // method overloading
+public class recursion_sum {
 
     int add(int num1, int num2) {
 
