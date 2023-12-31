@@ -4,7 +4,7 @@ class emplyee {
 
 public class javaInheritance extends emplyee {
 
-    int bounce = 10000;
+    float bounce = 10000;
 
     public static void main(String[] args) {
 
