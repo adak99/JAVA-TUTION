@@ -1,6 +1,6 @@
+// Hierarchical Inheritance
 
 class chidocupation {
-
     String ocupation = "Student";
 }
 
