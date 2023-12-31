@@ -13,8 +13,7 @@ public class javaSingleInheritance {
 
         parentClass obj = new parentClass();
 
-        System.out.print(obj.firstName);
-        System.out.print(obj.surName);
+        System.out.println("First Name:- " + obj.firstName);
+        System.out.println("Sur Name:- " + obj.surName);
     }
-
 }
