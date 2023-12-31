@@ -1,10 +1,10 @@
 class emplyee {
-    float salary = 400000;
+    float salary = 40000;
 }
 
 public class javaInheritance extends emplyee {
 
-    int bounce = 100000;
+    int bounce = 10000;
 
     public static void main(String[] args) {
 
