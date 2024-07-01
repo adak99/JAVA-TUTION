@@ -1,18 +1,21 @@
 public class print { // recursion
-    public static void printNumber(int a, int b, int n) {
-        if (n == 0)
-            return;
+    public static int printNumber(int x, int n) {
+        if (n == 0) {
+            return 1;
+        }
+        if (x == 0) {
+            return 1;
+        }
 
-        int c = a + b;
-        System.out.print(c + " ");
-        printNumber(b, c, n - 1);
+        int a = printNumber(x, n - 1);
+        int b = x * a;
+
+        return b;
     }
 
     public static void main(String[] args) {
-        int a = 0;
-        int b = 1;
-        System.out.print(a + " " + b + " ");
-        int n = 5;
-        printNumber(a, b, n - 2);
+        int x = 2, n = 5;
+        int result = printNumber(x, n);
+        System.out.println(result);
     }
 }
