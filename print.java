@@ -1,20 +1,15 @@
-public class print { // array
-    public static void printNumebr(int arr[], int n, int temp) {
-
-        for (int i = 0; i < arr.length - 1; i++) {
-            arr[i] = arr[i + 1];
+public class print { // recursion
+    public static int printNumebr(int n) {
+        if (n == 1 || n == 0) {
+            return 1;
         }
-        arr[n] = temp;
+
+        int factNumber = printNumebr(n - 1);
+        int factResult = n * factNumber;
+        return factResult;
     }
 
     public static void main(String[] args) {
-        int arr[] = { 1, 2, 3 };
-
-        printNumebr(arr, arr.length - 1, arr[0]);
-
-        for (int resutl : arr) {
-            System.out.println(resutl);
-        }
-
+        System.out.println(printNumebr(5));
     }
 }
