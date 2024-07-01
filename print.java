@@ -1,11 +1,15 @@
-public class print {
-    public static void main(String[] args) {
-        // print factorial of a number
-        int n = 5;
-        int fact = 1;
-        for (int i = 1; i <= n; i++) {
-            fact = i * fact;
+public class print { // recursion
+    public static void printNumebr(int n) {
+        if (n == 0) {
+            return;
         }
-        System.out.println(fact);
+
+        System.out.print(n + " ");
+        printNumebr(n - 1);
+    }
+
+    public static void main(String[] args) {
+        int n = 5;
+        printNumebr(n);
     }
 }
