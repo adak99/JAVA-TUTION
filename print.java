@@ -1,15 +1,18 @@
 public class print { // recursion
-    public static int printNumebr(int n) {
-        if (n == 1 || n == 0) {
-            return 1;
-        }
+    public static void printNumber(int a, int b, int n) {
+        if (n == 0)
+            return;
 
-        int factNumber = printNumebr(n - 1);
-        int factResult = n * factNumber;
-        return factResult;
+        int c = a + b;
+        System.out.print(c + " ");
+        printNumber(b, c, n - 1);
     }
 
     public static void main(String[] args) {
-        System.out.println(printNumebr(5));
+        int a = 0;
+        int b = 1;
+        System.out.print(a + " " + b + " ");
+        int n = 5;
+        printNumber(a, b, n - 2);
     }
 }
