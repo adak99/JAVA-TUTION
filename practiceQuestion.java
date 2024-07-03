@@ -1,22 +1,20 @@
 public class practiceQuestion {
-
-    static int positive = 0;
-    static int negetive = 0;
-    static int zero = 0;
-
     public static void main(String[] args) {
+        int n = 5;
 
-        for (int i = 0; i < args.length; i++) {
-            if (Integer.parseInt(args[i]) > 0) {
-                positive = positive + 1;
-            } else if (Integer.parseInt(args[i]) == 0) {
-                zero = zero + 1;
-            } else {
-                negetive = negetive + 1;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
             }
+
+            int space = 2 * (n - i);
+            for (int j = 1; j <= space; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
         }
-        System.out.println(positive + " Positive number.");
-        System.out.println(negetive + " Negetive number.");
-        System.out.println(zero + " zero no.");
     }
 }
