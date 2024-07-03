@@ -1,16 +1,10 @@
 n = 5
+m = 5
 
-i = 1
-while i <= n:
-    # print space
-    j = 1
-    while j <= n - i:
-        print(" ", end="")
-        j += 1
-    # print space
-    k = 1
-    while k <= n:
-        print("*", end="")
-        k += 1
+for i in range(1, n + 1):
+    for j in range(1, m + 1):
+        if i == 1 or j == 1 or i == n or j == m:
+            print("*", end="")
+        else:
+            print(" ", end="")
     print()
-    i += 1
