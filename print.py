@@ -1,15 +1,22 @@
-n = 5
+# a = list(map(int, input("Enter the value of a[]: ").split()))
+# b = list(map(int, input("Enter the value of b[]: ").split()))
+a = [1, 2, 3]
+b = [1, 2, 3]
+listEquals = True
 
-# Upper part
-for i in range(1, n + 1):
-    for j in range(0, n - i):
-        print(" ", end="")
-    for k in range(1, i + 1):
-        print(" *", end="")
-    print()
-for i in range(1, n + 1):
-    for j in range(1, i + 1):
-        print(" ", end="")
-    for k in range(0, n - i):
-        print(" *", end="")
-    print()
+if len(a) != len(b):
+    listEquals = False
+else:
+    for i in range(len(a)):
+        if a[i] != b[i]:
+            listEquals = False
+            break
+
+if listEquals:
+    print("{}".format(a))
+    print("{}".format(b))
+    print("EQUAL")
+else:
+    print("{}".format(a))
+    print("{}".format(b))
+    print("NOT EQUAL")
