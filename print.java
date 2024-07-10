@@ -1,12 +1,17 @@
 public class print {
-    public static void main(String[] args) {
-        int arr[][] = { { 1, 2, 3 }, { 1, 2, 3 }, { 1, 2, 3 } };
-
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length; j++) {
-                System.out.print(arr[i][j]);
-            }
-            System.out.println();
+    public static int printFactorial(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
         }
+
+        int factNumber = printFactorial(n - 1);
+        int result = n * factNumber;
+        return result;
+    }
+
+    public static void main(String[] args) {
+        int n = 5;
+        int result = printFactorial(n);
+        System.out.println(n + " factorial is: " + result);
     }
 }
