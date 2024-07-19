@@ -1,19 +1,32 @@
-public class print {
-    public static void calculation(int a, int b, int n) {
-        if (n == 0) {
-            return;
-        }
+import java.util.HashSet;
+import java.util.Set;
 
-        int c = a + b;
-        System.out.print(" " + c);
-        calculation(b, c, n - 1);
+public class print {
+    public static int deleteDuplicate(int arr[], int arrSize) {
+        if (arrSize <= 1)
+            return arrSize;
+
+        Set<Integer> unicqElement = new HashSet<>();
+
+        for (int i = 0; i < arrSize; i++)
+            unicqElement.add(arr[i]);
+
+        int index = 0;
+        for (int element : unicqElement)
+            arr[index++] = element;
+
+        return unicqElement.size();
+
     }
 
     public static void main(String[] args) {
-        int a = 0;
-        int b = 1;
-        System.out.print(a + " " + b);
-        int n = 5;
-        calculation(a, b, n - 2);
+        int arr[] = { 1, 3, 4, 2, 2, 3, 4 };
+        int arrSize = arr.length;
+
+        arrSize = deleteDuplicate(arr, arrSize);
+
+        for (int i = 0; i < arrSize; i++) {
+            System.out.print(arr[i] + " ");
+        }
     }
 }
