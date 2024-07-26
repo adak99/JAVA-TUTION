@@ -1,16 +1,23 @@
-def towerOfHanoi(n, scorce, helper, destionation):
-    if n == 1:
-        print(f"Transfer disk {n} from {scorce} to {destionation}")
-        return
+def conqure(arr, si, mid, ei):
+    merder_arr = [0] * (ei - si + 1)
 
-    towerOfHanoi(n - 1, scorce, destionation, helper)
-    print(f"Transfer disk {n} from {scorce} to {destionation}")
-    towerOfHanoi(n - 1, helper, scorce, destionation)
+    idx1 = si
+    idx2 = mid+1
+    x=0
+    
+    while(idx1 <= mid and idx2 <= ei ):
+        if arr[]
+
+def divide(arr, si, ei):
+    mid = si + (ei - si) / 2
+    divide(arr, si, mid)
+    divide(arr, mid + 1, ei)
+    conqure(arr, si, mid, ei)
 
 
 def main():
-    n = 3
-    towerOfHanoi(n, "source", "helper", "destination")
+    arr = [6, 3, 9, 5, 2, 8]
+    size = len(arr)
 
 
 if __name__ == "__main__":
