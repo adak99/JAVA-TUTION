@@ -1,19 +1,16 @@
 public class print {
-    public static void towerOfHonoi(int n, String scorce, String helper, String destination) {
-        if (n == 1) {
-            System.out.println(scorce + " " + helper + " " + destination);
+    public static void reverseStr(String str, int index) {
+        if (index == 0) {
+            System.out.print(str.charAt(index) + " ");
             return;
         }
 
-        towerOfHonoi(n - 1, scorce, destination, helper);
-        System.out.println(scorce + " " + helper + " " + destination);
-        towerOfHonoi(n - 1, helper, scorce, destination);
-
+        System.out.print(str.charAt(index) + " ");
+        reverseStr(str, index - 1);
     }
 
     public static void main(String[] args) {
-        int n = 3;
-        towerOfHonoi(n, "scorce", "helper", "destination");
+        String str = "ABCD";
+        reverseStr(str, str.length() - 1);
     }
-
 }

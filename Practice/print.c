@@ -1,21 +1,23 @@
 #include <stdio.h>
+#include <string.h>
 
-void towerOfHanoi(int n, char s, char h, char d) // char s = scorce, char h = helper , char d = destination
+void reverseStr(char str[], int index)
 {
-    if (n == 1)
+    if (index == 0)
     {
-        printf("Transfer dis %d form %c to %c\n", n, s, d);
+        printf("%c ", str[index]);
         return;
     }
 
-    towerOfHanoi(n - 1, s, d, h);
-    printf("Transfer dis %d form %c to %c\n", n, s, d);
-    towerOfHanoi(n - 1, h, s, d);
+    printf("%c ", str[index]);
+    reverseStr(str, index - 1);
 }
 
 int main()
 {
-    int n = 3;
-    towerOfHanoi(n, 's', 'h', 'd');
+    char str[] = "ABCD";
+
+    reverseStr(str, strlen(str) - 1);
+
     return 0;
 }
