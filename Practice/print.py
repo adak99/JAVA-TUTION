@@ -1,24 +1,14 @@
-def conqure(arr, si, mid, ei):
-    merder_arr = [0] * (ei - si + 1)
+def print_fibo(a, b, n):
+    if n == 0:
+        return
 
-    idx1 = si
-    idx2 = mid+1
-    x=0
-    
-    while(idx1 <= mid and idx2 <= ei ):
-        if arr[]
-
-def divide(arr, si, ei):
-    mid = si + (ei - si) / 2
-    divide(arr, si, mid)
-    divide(arr, mid + 1, ei)
-    conqure(arr, si, mid, ei)
-
-
-def main():
-    arr = [6, 3, 9, 5, 2, 8]
-    size = len(arr)
+    c = a + b
+    print(f" {c}", end="")
+    print_fibo(b, c, n - 1)
 
 
 if __name__ == "__main__":
-    main()
+    a = 0
+    b = 1
+    print(f"{a} {b}", end="")
+    print_fibo(a, b, 7 - 2)
