@@ -1,19 +1,19 @@
 public class print {
-    public static void printFibo(int a, int b, int n) {
-        if (n == 0) {
+    public static void towerOfHonoi(int n, String scorce, String helper, String destination) {
+        if (n == 1) {
+            System.out.println(scorce + " " + helper + " " + destination);
             return;
         }
 
-        int c = a + b;
-        System.out.print(" " + c);
-        printFibo(b, c, n - 1);
+        towerOfHonoi(n - 1, scorce, destination, helper);
+        System.out.println(scorce + " " + helper + " " + destination);
+        towerOfHonoi(n - 1, helper, scorce, destination);
+
     }
 
     public static void main(String[] args) {
-        int a = 0;
-        int b = 1;
-        System.out.print(a + " " + b);
-        int n = 7;
-        printFibo(a, b, n - 2);
+        int n = 3;
+        towerOfHonoi(n, "scorce", "helper", "destination");
     }
+
 }
